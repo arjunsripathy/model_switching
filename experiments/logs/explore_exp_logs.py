@@ -4,13 +4,17 @@ lambdas and other configurations.  Intended usage is to run with python
 interactive mode providing the pickle log file to analyze.  Then ad-hoc using
 the methods here to generate insights and visualizations.
 
+Run
+python -i explore_exp_logs.py <experiment pickle log path>
+
 agg_episode_stats: print out average time step metrics further aggregated
 over random seeds.  For example one may analyze the "reward", "planning_time",
 "decision_time", "overall_time" and more.
+e.g. agg_episode_stats("reward")
 
-model_usage: Displays the breakdown of how frequently each model was used.
+model_usage(): Displays the breakdown of how frequently each model was used.
 
-ovr_time_by_y: Displays aggregate time series analysis for the computational
+ovr_time_by_y(): Displays aggregate time series analysis for the computational
 time usage over the course of the experiment.  Useful for understanding when
 more/less complex models were used.
 '''
