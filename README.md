@@ -1,4 +1,4 @@
-# model_switching
+# Model Switching
 
 Implementation of Human Model Switching experiments in a Self-Driving Car simulator.  Experiments present a variety of situations to the robot car, 
 and during portions of each it's necessary to have a more complex human model.  But at other times, a less expensive model is more than sufficient.
