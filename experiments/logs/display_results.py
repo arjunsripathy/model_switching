@@ -2,7 +2,12 @@
 Displays results manually provided for each experiment, analyzing
 the computation time and reward tradeoff for different models and
 switchers.  Further provides 90% confidence bounds around reported
-values, and normalizes the relative scale of reward and compute. 
+values, and normalizes the relative scale of reward and compute.
+
+Run the following command to display results for an experiment.
+python display_results.py <EXP NAME>
+
+where <EXP NAME> is one of stay_back, merger, or give_way.
 '''
 
 import matplotlib.pyplot as plt
