@@ -8,3 +8,5 @@ whenever this is not the case.  To get a sense for how these experiments look, s
 
 The experiments folder holds the files responsible for launching experiments, as well as the stored results.  The interact-drive folder holds all the
 code for the simulator as well as planning and switching algorithms.
+
+Work on this project was done in association with the <a href = "http://interact.berkeley.edu/"> InterACT Lab </a> at Berkeley.
