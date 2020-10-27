@@ -54,6 +54,10 @@ plt.rcParams.update({'hatch.linewidth': 3,
                      'figure.figsize': (8, 6)})
 P_STYLE = {'alpha': 0.5}
 
+RC = 'limegreen'
+PTC = 'tan'
+DTC = 'darkgoldenrod'
+
 N = len(names)
 bar_width = 0.25
 bar_spacing = bar_width * 2 + 0.3
@@ -89,12 +93,12 @@ ax1.set_xticks(np.array(time_x) + bar_width * 0.5)
 ax1.set_xticklabels(names)
 
 ax1.bar(get(time_x, MS), get(ovr_time_bars, MS), width = bar_width, 
-        color = 'cornflowerblue', yerr = get(time_confs, MS), capsize = 6.0)
-ax1.bar(get(time_x, MS), get(plan_time_bars, MS), width = bar_width, color = 'gray')
+        color = DTC, yerr = get(time_confs, MS), capsize = 6.0)
+ax1.bar(get(time_x, MS), get(plan_time_bars, MS), width = bar_width, color = PTC)
 
 ax1.bar(get(time_x, P), get(ovr_time_bars, P), width = bar_width, 
-        color = 'cornflowerblue', yerr = get(time_confs, P), capsize = 6.0, **P_STYLE)
-ax1.bar(get(time_x, P), get(plan_time_bars, P), width = bar_width, color = 'gray', **P_STYLE)
+        color = DTC, yerr = get(time_confs, P), capsize = 6.0, **P_STYLE)
+ax1.bar(get(time_x, P), get(plan_time_bars, P), width = bar_width, color = PTC, **P_STYLE)
 
 rew_shift = rew_bars[0]
 max_rew = rew_bars[-1]
@@ -114,17 +118,17 @@ ax2.set_yticks(yticks)
 ax2.set_yticklabels([f"{v + rew_shift:.0f}" for v in yticks])
 
 ax2.bar(get(rew_x, MS), get(rew_bars, MS), width = bar_width, 
-        color = 'orange', yerr = get(rew_confs, MS), capsize = 6.0)
+        color = RC, yerr = get(rew_confs, MS), capsize = 6.0)
 
 ax2.bar(get(rew_x, P), get(rew_bars, P), width = bar_width, 
-        color = 'orange', yerr = get(rew_confs, P), capsize = 6.0, **P_STYLE)
+        color = RC, yerr = get(rew_confs, P), capsize = 6.0, **P_STYLE)
 
 ax2.hlines(rew_bars[0] , min_x, max_x, lw = 1, linestyle = 'dashed')
 ax2.hlines(rew_bars[-1], min_x, max_x, lw = 1, linestyle = 'dashed')
 
-legend_elements = [Line2D([0], [0], color='orange', lw=6, label='Reward'),
-                   Line2D([0], [0], color='gray', lw=6, label='Planning Time'),
-                   Line2D([0], [0], color='cornflowerblue', lw=6, label='Decision Time'),]
+legend_elements = [Line2D([0], [0], color=RC, lw=6, label='Reward'),
+                   Line2D([0], [0], color=PTC, lw=6, label='Planning Time'),
+                   Line2D([0], [0], color=DTC, lw=6, label='Decision Time'),]
 
 ax2.legend(handles=legend_elements, loc='upper left', framealpha=1.0, 
            frameon = False, fontsize = 14)

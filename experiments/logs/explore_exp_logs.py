@@ -41,7 +41,7 @@ LAMBDAS = sorted(list(experiment_log['runs'].keys()))
 print(f"{NUM_RUN} trials of {TIME_STEPS} saved for {len(LAMBDAS)} lambdas.")
 
 LOG_INDICES = experiment_log['log_indices']
-COLORS = ['orange', 'cornflowerblue', 'g'][:len(LAMBDAS)]
+COLORS = ['gold','darkturquoise'][:len(LAMBDAS)]
 
 def extract(value, log):
     if (value in LOG_INDICES):
@@ -137,9 +137,9 @@ def ovr_time_by_y(relative_radius = 0.05, num_points = 100, err_sd = 2.0):
         plt.fill_between(y_values, mean_time - err_time, mean_time + err_time, 
                          color = COLORS[lambd_index], alpha = 0.5)
 
-    plt.title(f"Give Way: Overall Time by Y Position")
-    legend_elements = [Line2D([0], [0], color='orange', lw=6, label=f'\u03BB: {LAMBDAS[0]}'),
-                       Line2D([0], [0], color='cornflowerblue', lw=6, label=f'\u03BB: {LAMBDAS[1]}'),]
+    plt.title(f"Overall Time by Y Position")
+    legend_elements = [Line2D([0], [0], color=COLORS[0], lw=6, label=f'\u03BB: {LAMBDAS[0]}'),
+                       Line2D([0], [0], color=COLORS[1], lw=6, label=f'\u03BB: {LAMBDAS[1]}'),]
     plt.legend(handles=legend_elements, loc='upper right', framealpha=1.0, 
            frameon = False, fontsize = 14)
     plt.xlabel("Y position")
