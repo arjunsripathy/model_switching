@@ -52,11 +52,11 @@ plt.rcParams.update({'hatch.linewidth': 3,
                      'font.family': 'palatino',
                      'font.size': 18,
                      'figure.figsize': (8, 6)})
-P_STYLE = {'alpha': 0.5}
+P_STYLE = {'alpha': 0.8}
 
 RC = 'gold'
 PTC = 'mediumorchid'
-DTC = 'plum'
+DTC = 'steelblue'
 
 N = len(names)
 bar_width = 0.25
