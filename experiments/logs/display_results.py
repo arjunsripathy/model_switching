@@ -54,9 +54,9 @@ plt.rcParams.update({'hatch.linewidth': 3,
                      'figure.figsize': (8, 6)})
 P_STYLE = {'alpha': 0.5}
 
-RC = 'limegreen'
-PTC = 'tan'
-DTC = 'darkgoldenrod'
+RC = 'gold'
+PTC = 'mediumorchid'
+DTC = 'plum'
 
 N = len(names)
 bar_width = 0.25
