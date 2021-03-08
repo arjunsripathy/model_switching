@@ -3,4 +3,4 @@ As environments involving both robots and hu- mans become increasingly common, s
 
 ## Video Walkthrough
 
-[![Model Switching Walkthrough](http://img.youtube.com/vi/ZwHJqMxnXxo/0.jpg)](http://www.youtube.com/watch?v=ZwHJqMxnXxo "Model Switching Walkthrough")
+<iframe width="560" height="315" src="https://youtu.be/ZwHJqMxnXxo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
